@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pig Dice Game &mdash; Dice Game  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Module Overview" href="game_modules.html" />
+    <link rel="prev" title="Welcome to Dice Game’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Dice Game
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pig Dice Game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#game-structure">Game Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#implementation-of-ai-intelligence">Implementation of AI (Intelligence)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-play">How to Play</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#game-menu-options">Game Menu Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-download-and-use-the-code">How to Download and Use the Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-run-tests-and-generate-coverage-report">How to Run Tests and Generate Coverage Report</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="game_modules.html">Module Overview</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Dice Game</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Pig Dice Game</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/introduction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pig-dice-game">
+<span id="id1"></span><h1>Pig Dice Game<a class="headerlink" href="#pig-dice-game" title="Link to this heading"></a></h1>
+<p>This is a game developed in Python using object-oriented programming principles. The game supports player vs computer and player vs player modes.</p>
+<section id="game-structure">
+<h2>Game Structure<a class="headerlink" href="#game-structure" title="Link to this heading"></a></h2>
+<p>The game is structured into several Python files each serving a different purpose:</p>
+<ul class="simple">
+<li><p><cite>main.py</cite>: This is the entry point of the game. It contains the main method for the game and the game loop.</p></li>
+<li><p><cite>playerVsComputer.py</cite>: This file contains the logic for the game mode where a player plays against the computer.</p></li>
+<li><p><cite>playerVsPlayer.py</cite>: This file contains the logic for the game mode where a player plays against another player.</p></li>
+<li><p><cite>tools.py</cite>: This file contains various utility functions used across the game.</p></li>
+<li><p><cite>settingsClass.py</cite>: This file contains a class for managing game settings.</p></li>
+<li><p><cite>rules.py</cite>: This file contains the rules of the game.</p></li>
+<li><p><cite>developer.py</cite>: This file contains developer-specific functionalities.</p></li>
+<li><p><cite>histogram.py</cite>: This file is used for generating histograms related to the game.</p></li>
+<li><p><cite>intelligence.py</cite>: This file is used for managing the game’s AI when playing in player vs computer mode.</p></li>
+<li><p><cite>exceptions.py</cite>: This file contains custom exceptions used in the game.</p></li>
+</ul>
+</section>
+<section id="implementation-of-ai-intelligence">
+<h2>Implementation of AI (Intelligence)<a class="headerlink" href="#implementation-of-ai-intelligence" title="Link to this heading"></a></h2>
+<p>The <cite>Intelligence</cite> class in the <cite>intelligence.py</cite> file controls the actions of the computer player in the game. Here’s how it is implemented:</p>
+<ul class="simple">
+<li><p>The <cite>start_round</cite> method initiates a round based on the chosen difficulty level.</p></li>
+<li><p>The <cite>easy</cite>, <cite>medium</cite>, and <cite>hard</cite> methods determine the number of dice rolls the computer player makes based on the difficulty level.</p></li>
+<li><p>The <cite>roll_die</cite> method simulates rolling the dice for the computer player and calculates the round score.</p></li>
+<li><p>The <cite>hold</cite> method determines when the computer player decides to hold its current score.</p></li>
+<li><p>The <cite>is_winning</cite> method checks if the computer player has reached the winning score.</p></li>
+</ul>
+</section>
+<section id="how-to-play">
+<h2>How to Play<a class="headerlink" href="#how-to-play" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open a command prompt or terminal application.</p></li>
+<li><p>Navigate to the <cite>src/game</cite> folder.</p></li>
+<li><p>Run <cite>main.py</cite> to start the game.</p></li>
+<li><p>Choose between ‘Player vs Computer’ and ‘Player vs Player’ modes.</p></li>
+<li><p>Follow the on-screen instructions to play the game.</p></li>
+</ol>
+</section>
+<section id="game-menu-options">
+<h2>Game Menu Options<a class="headerlink" href="#game-menu-options" title="Link to this heading"></a></h2>
+<p>Depending on the game mode chosen, the game menu will display different options:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Player vs Computer Mode</strong>:</dt><dd><ul>
+<li><p><strong>Start Game</strong>: This option starts the game.</p></li>
+<li><p><strong>Show Rules</strong>: This option displays the rules of the game.</p></li>
+<li><p><strong>Change Name</strong>: This option allows you to change the name of the player.</p></li>
+<li><p><strong>Show Highscores</strong>: This option displays the high scores of the game.</p></li>
+<li><p><strong>Exit Game</strong>: This option exits the game.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Player vs Player Mode</strong>:</dt><dd><ul>
+<li><p><strong>Start Game</strong>: This option starts the game.</p></li>
+<li><p><strong>Show Rules</strong>: This option displays the rules of the game.</p></li>
+<li><p><strong>Show Highscores</strong>: This option displays the high scores of the game.</p></li>
+<li><p><strong>Exit Game</strong>: This option exits the game.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="how-to-download-and-use-the-code">
+<h2>How to Download and Use the Code<a class="headerlink" href="#how-to-download-and-use-the-code" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Download the ZIP-file that contains the code through this link: <em>Insert link</em></p></li>
+<li><p>Extract the ZIP-file to any location on your computer.</p></li>
+<li><p>Open a Python-compatible editor.</p></li>
+<li><p>Open the folder as a project.</p></li>
+<li><p>You can now edit the code as you see fit and/or play the game as described in the “How to play” section of this README.md file.</p></li>
+</ol>
+</section>
+<section id="how-to-run-tests-and-generate-coverage-report">
+<h2>How to Run Tests and Generate Coverage Report<a class="headerlink" href="#how-to-run-tests-and-generate-coverage-report" title="Link to this heading"></a></h2>
+<p>We have implemented a test suite to ensure the code’s reliability and effectiveness. This section will show you how to run the complete test and generate a coverage report:</p>
+<ol class="arabic">
+<li><p><strong>Note</strong>: Make sure you have a terminal application installed on your system to execute the below commands. If you do NOT, feel free to install any terminal application. Follow this link to install Git Bash: <em>https://git-scm.com/downloads</em></p></li>
+<li><p><strong>Install Required Packages</strong>: To ensure that you will be able to run the tests, you have to have the necessary packages installed. You can install them using this command in the terminal:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Create and Activate a Virtual Environment</strong>: It is recommended to create and activate a virtual environment before running the tests. This isolates the project’s dependencies from your system’s Python installation. You can create and activate a virtual environment using the following commands in the terminal:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="o">.</span><span class="n">venv</span>
+<span class="n">source</span> <span class="o">.</span><span class="n">venv</span><span class="o">/</span><span class="n">Scripts</span><span class="o">/</span><span class="n">activate</span>
+<span class="ow">or</span>
+<span class="n">make</span> <span class="n">venv</span> <span class="o">-</span> <span class="n">after</span> <span class="n">the</span> <span class="nb">next</span> <span class="n">step</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Install Make</strong>: Make is a build automation tool that simplifies the process of running commands. If you don’t have Make installed, you can install it using the package manager of your operating system.</p></li>
+<li><p><strong>Run Tests</strong>: To run the complete test suite, execute the below command in the terminal:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">test</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Generate Coverage Report</strong>: To generate a coverage report for the test, execute the below command in the terminal:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">coverage</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p><strong>Generate an HTML Coverage Report</strong>: To generate an HTML coverage report for the test, execute the below command in the terminal:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">coverage</span> <span class="n">html</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>This will generate an HTML report in the “htmlcov” directory. To open the report, you can open the “index.html” file in your web browser.
+Note that</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">test</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>also generates an HTML coverage report.</p>
+</li>
+<li><p><strong>Generate UML Diagrams</strong>: To generate UML diagrams for the game, execute the below command in the terminal:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">uml</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>This will generate UML diagrams in PlantUML format in the “doc/uml” directory. You can then copy the code and the paste it on this site: <em>https://www.planttext.com/</em> to generate the diagrams.</p>
+</li>
+</ol>
+<p>Enjoy the game!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to Dice Game’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="game_modules.html" class="btn btn-neutral float-right" title="Module Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Nicholas Malm &amp; Jacob Hellgren.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
